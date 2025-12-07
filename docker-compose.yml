@@ -1,0 +1,17 @@
+services:
+  introskipper-webhook:
+    build: .
+    container_name: introskipper-webhook
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - arr_suite # optional; will use default network if not defined
+
+networks:
+  arr_suite:
+    external: true
+    name: arr_suite
+    # Remove the 'external' line if you want docker-compose to create the network automatically
