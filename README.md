@@ -60,7 +60,7 @@ DELAY_SECONDS=300  # 5 minutes delay to account for library scan
 ### 3. Build and run with Docker Compose
 
 ```bash
-docker-compose up -d
+docker-compose up -d --build
 ```
 
 * The webhook will run on **port 5000**.
